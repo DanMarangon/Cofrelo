@@ -18,6 +18,8 @@ CREATE TABLE `transacao` (
   `recorrencias` int,
   `inicio` date,
   `juros` float,
+  `nome` text NOT NULL 
+  `descricao` text 
   `id_categoria` int NOT NULL,
   `id_carteira` int NOT NULL
 );

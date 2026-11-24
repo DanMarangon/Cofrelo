@@ -18,6 +18,8 @@ Table transacao {
   recorrencias int 
   inicio date 
   juros float 
+  nome text [not null]
+  descricao text
   id_categoria int [not null, ref: > categoria.id]
   id_carteira int [not null, ref: > carteira.id]
 }
