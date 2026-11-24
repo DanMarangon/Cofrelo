@@ -1,0 +1,36 @@
+Table usuario {
+  id integer [not null, primary key]
+  nome text [not null]
+  email text [not null]
+  senha_hash text [not null]
+  senha_salt text [not null] 
+}
+
+Table carteira {
+  id integer [not null, primary key]
+  saldo float [not null]
+  id_usuario int [not null, ref: > usuario.id]
+}
+
+Table transacao {
+  id integer [not null, primary key]
+  valor float [not null]
+  recorrencias int 
+  inicio date 
+  juros float 
+  id_categoria int [not null, ref: > categoria.id]
+  id_carteira int [not null, ref: > carteira.id]
+}
+
+Table meta {
+  id integer [not null, primary key]
+  atual float
+  objetivo float
+  limite date
+  inicio date
+}
+
+Table categoria {
+  id integer [not null, primary key]
+  nome text [not null]
+}
