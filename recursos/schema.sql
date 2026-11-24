@@ -9,6 +9,8 @@ CREATE TABLE `usuario` (
 CREATE TABLE `carteira` (
   `id` integer PRIMARY KEY NOT NULL,
   `saldo` float NOT NULL,
+  `nome` text NOT NULL, 
+  `descricao` text ,
   `id_usuario` int NOT NULL
 );
 
@@ -18,8 +20,8 @@ CREATE TABLE `transacao` (
   `recorrencias` int,
   `inicio` date,
   `juros` float,
-  `nome` text NOT NULL 
-  `descricao` text 
+  `nome` text NOT NULL,
+  `descricao` text,
   `id_categoria` int NOT NULL,
   `id_carteira` int NOT NULL
 );

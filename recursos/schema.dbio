@@ -9,6 +9,8 @@ Table usuario {
 Table carteira {
   id integer [not null, primary key]
   saldo float [not null]
+  nome text [not null]
+  descricao text
   id_usuario int [not null, ref: > usuario.id]
 }
 
